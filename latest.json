@@ -1,16 +1,16 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-520783/moting-520783-arm64-v8a.apk",
-      "notes": "自动更新客户端接入 + 更新说明匹配修复。\n\n- 新增独立分发仓库的更新数据源（按包名分通道、比 versionCode）\n- 修复：debug 包按基础版本匹配更新说明，关于页与启动弹窗可正常显示\n- 新增 StrictMode（仅 debug）",
-      "publishedAt": "2026-10-20T05:47:14Z",
-      "sha256": "3070a59d39e49d6f8298c4d6f7d44cd1ace0045eb6c5cfaa34aaf420edf3836f",
-      "size": 116061104,
-      "tag": "debug-520783",
-      "versionCode": 520783,
-      "versionName": "5.0.0+g51f780b2.workbuddy/overheating-issue-8bbb0de8_debug"
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-521181/moting-521181-arm64-v8a.apk",
+      "notes": "听书续播与日志面板修复、发热治理。\n\n- 断点续播：停播后翻页再起播不再回弹到停播页；暂停后翻页点播放从暂停点接着读（TXT / EPUB 原生 / EPUB 网页同效）\n- 日志面板：章节标注统一为「第N章·在播 / 预取+K / 滞后-K」；合成日志补齐进行态与在飞路数；全部栏顶部显示在播章并接入合成日志；BGM 日志中文化与真实曲名；头像日志补章节\n- 发热治理：冷启主题图按尺寸降采样解码；卡顿扫描延后到首帧后 8 秒；新增「省电：播放进度 5 秒保存一次」「暂停时后台也停下」两个开关（均默认开）；迷你播放器旋转动画仅在播放时绘制\n- 更新链路：检查更新改由独立分发仓库供清单，按包名选通道、比版本号；失败自动回落 GitHub Releases",
+      "publishedAt": "2026-10-20T11:57:33Z",
+      "sha256": "ed30dda88dea2fc5f4e098140872805a30f4804f857c4f930d583ef25c791e5d",
+      "size": 116093750,
+      "tag": "debug-521181",
+      "versionCode": 521181,
+      "versionName": "5.0.0+ga080f736.overheating-issue_debug"
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T05:47:14Z"
+  "updatedAt": "2026-10-20T11:57:33Z"
 }
