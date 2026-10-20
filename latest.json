@@ -1,16 +1,16 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-521181/moting-521181-arm64-v8a.apk",
-      "notes": "听书续播与日志面板修复、发热治理。\n\n- 断点续播：停播后翻页再起播不再回弹到停播页；暂停后翻页点播放从暂停点接着读（TXT / EPUB 原生 / EPUB 网页同效）\n- 日志面板：章节标注统一为「第N章·在播 / 预取+K / 滞后-K」；合成日志补齐进行态与在飞路数；全部栏顶部显示在播章并接入合成日志；BGM 日志中文化与真实曲名；头像日志补章节\n- 发热治理：冷启主题图按尺寸降采样解码；卡顿扫描延后到首帧后 8 秒；新增「省电：播放进度 5 秒保存一次」「暂停时后台也停下」两个开关（均默认开）；迷你播放器旋转动画仅在播放时绘制\n- 更新链路：检查更新改由独立分发仓库供清单，按包名选通道、比版本号；失败自动回落 GitHub Releases",
-      "publishedAt": "2026-10-20T11:57:33Z",
-      "sha256": "ed30dda88dea2fc5f4e098140872805a30f4804f857c4f930d583ef25c791e5d",
-      "size": 116093750,
-      "tag": "debug-521181",
-      "versionCode": 521181,
-      "versionName": "5.0.0+ga080f736.overheating-issue_debug"
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-521274/moting-521274-arm64-v8a.apk",
+      "notes": "# 墨听 debug 521274\n\n修复「已发布新版本却提示已是最新」。\n\n## 修了什么\n\n- **版本清单改为多源依次读取**：raw → jsDelivr → GitHub API，任一可用即返回。此前只读 `raw.githubusercontent.com`，该域名在部分移动网络下不可达，一旦失败整个更新检查就失效。\n- **debug 包不再被误判为已是最新**：debug 版本号形如 `5.0.0+g<hash>.<分支>_debug`，旧版版本比较器无法解析 `+` 之后的构建信息，解析异常被吞掉后一律判定「不更新」。现按语义化版本规范忽略构建信息后再比较。\n- **失败原因不再被隐藏**：检查更新失败时会同时告知主渠道与备用渠道的原因，不再悄无声息地改走查不到新版本的备用渠道。\n\n## 同时包含\n\n- 听书断点回弹与暂停续播纠偏（TXT / EPUB 原生 / EPUB 网页三种模式均生效）\n- 朗读日志面板治本：章节标注统一、合成三态闭环、BGM 中文化\n- 发热治理：冷启动降采样解码、卡顿扫描延后、播放进度 5 秒落盘、暂停时后台停下\n\n## 安装注意\n\n本包为 debug 通道（`com.applecabal.njread.debug`），可与正式版共存，安装不会覆盖正式包。\n\n覆盖安装后若仍提示已是最新，请在「关于 → 检查更新」查看提示中的具体原因，并按其中的渠道名反馈。",
+      "publishedAt": "2026-10-20T13:44:21Z",
+      "sha256": "47a1b00abaae8e45d78bf394703d0f1e3d080e5cc8266857a3ab4eaa39944a48",
+      "size": 116094184,
+      "tag": "debug-521274",
+      "versionCode": 521274,
+      "versionName": "5.0.0+g95fb5deb.overheating-issue_debug"
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-20T11:57:33Z"
+  "updatedAt": "2026-10-20T13:44:21Z"
 }
