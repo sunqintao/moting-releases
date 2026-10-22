@@ -1,14 +1,14 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-522560/moting-522560-arm64-v8a.apk",
-      "notes": "本版为调试通道（可与正式版共存），版本号 522560。\n\n- 播放期分析并发闸加入 PRELABEL_GATE 观测日志，并新增 prelabel_gate_limit 调试开关（仅 debug 包）：可在同一次播放中切换并发上限做 A/B，无需重启。\n- 限流策略与播放行为不变：播放链所需分析照旧直通，后台仍为一次只跑一章。\n- 其余内容与 5.0.0 说明一致：发热与耗电三批优化、听书中断与音色分配修复、断点续播、朗读日志面板、更新与下载。\n\n安装后可在「关于 → 更新日志」查看完整说明。",
-      "publishedAt": "2026-10-21T10:51:08Z",
-      "sha256": "3c5cdb669246c44714360fb7535e18c3a3fa56a492b05bc8b4ffe2f1f8b4b7a0",
-      "size": 116113052,
-      "tag": "debug-522560",
-      "versionCode": 522560,
-      "versionName": "5.0.0+g8e70210e.overheating-issue_debug"
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-524074/moting-524074-universal.apk",
+      "notes": "# 墨听调试包 · 听书性能第二批（2026-10-22）\n\n本次为 **debug 通道**测试包（包名 `com.applecabal.njread.debug`），与正式版可共存。\n\n## 本版改了什么\n\n- **听书缓存索引写入合并**：此前每合成一句就把整章清单全量重写（长章节下写入量随句数平方增长），现改为在时间窗内合并写入，并在切章、停止播放、退出应用时强制落盘；同时去掉无用的缩进格式，落盘体积一并减小。\n- **音频收流改单缓冲**：此前一个朗读单元被拆成上百个小数组、末尾再拼成一个，现在按需扩容一次拷贝，降低内存分配与数据搬运（对应此前实测偏高的 GC 占比）。\n- **音色插件支持实例复用（默认关闭）**：开启后不再为每一句重建插件运行环境，改为复用实例并逐句换绑文本、音色与情绪；**默认关闭，关着时与上一版行为完全一致**。\n\n## 验证状态（请知悉）\n\n- 编译通过；单元测试：缓存合并写 5/5、音频缓冲 7/7、插件实例池 3/3，另 62 项既有契约测试全绿。\n- **尚未做真机功耗对照**：本包的三项改动目前只到「机制就位 + 单测通过」，省了多少 CPU / 内存还没有实测数字。\n- 内置更新说明已同步（关于页可见）。本次沿用同一 `releaseId`，所以安装后**不会弹启动更新弹窗**，请在「关于 → 更新日志」查看。",
+      "publishedAt": "2026-10-22T12:24:18Z",
+      "sha256": "e6a851be7b653c3ac5865763f5f933e51d64ac89084afbd05f31f447fe4c9daa",
+      "size": 116146009,
+      "tag": "debug-524074",
+      "versionCode": 524074,
+      "versionName": "5.0.0+ga5951841.overheating-issue_debug"
     },
     "release": {
       "file": "https://github.com/sunqintao/moting-releases/releases/download/5.0.0-523486/moting-523486-arm64-v8a.apk",
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T03:59:59Z"
+  "updatedAt": "2026-10-22T12:24:18Z"
 }
