@@ -1,14 +1,14 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-524200/moting-524200-arm64-v8a.apk",
-      "notes": "# 墨听调试包 · 听书性能第二批（2026-10-22）\n\n本次为 **debug 通道**测试包（包名 `com.applecabal.njread.debug`），与正式版可共存。\n\n## 本版改了什么\n\n- **听书缓存索引写入合并**：此前每合成一句就把整章清单全量重写（长章节下写入量随句数平方增长），现改为在时间窗内合并写入，并在切章、停止播放、退出应用时强制落盘；同时去掉无用的缩进格式，落盘体积一并减小。\n- **音频收流改单缓冲**：此前一个朗读单元被拆成上百个小数组、末尾再拼成一个，现在按需扩容一次拷贝，降低内存分配与数据搬运（对应此前实测偏高的 GC 占比）。\n- **音色插件支持实例复用（默认关闭）**：开启后不再为每一句重建插件运行环境，改为复用实例并逐句换绑文本、音色与情绪；**默认关闭，关着时与上一版行为完全一致**。\n\n## 验证状态（请知悉）\n\n- 编译通过；单元测试：缓存合并写 5/5、音频缓冲 7/7、插件实例池 3/3，另 62 项既有契约测试全绿。\n- **尚未做真机功耗对照**：本包的三项改动目前只到「机制就位 + 单测通过」，省了多少 CPU / 内存还没有实测数字。\n- 内置更新说明已同步（关于页可见）。本次沿用同一 `releaseId`，所以安装后**不会弹启动更新弹窗**，请在「关于 → 更新日志」查看。",
-      "publishedAt": "2026-10-22T15:11:38Z",
-      "sha256": "d9daab38d2996e9129a0547cf25e21a337d68e5734cfce0a9f1421ce2b5880f7",
-      "size": 116146399,
-      "tag": "debug-524200",
-      "versionCode": 524200,
-      "versionName": "5.0.0+ga5951841.overheating-issue_debug"
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-526902/moting-526902-arm64-v8a.apk",
+      "notes": "墨听调试包 · 发热治理修复批（2026-10-24）\n\n本版修复上一版（524200）实测暴露的三个问题：远程音效播放失败与听书卡顿（音效新源改为默认关闭并加快速超时）、听书缓存清单合并写竞态导致的同句重复合成（越听越卡、发热压不下来的主因之一）、合成重试退避缺陷（此前从未生效且一旦激活会阻塞音频入队最长 15 秒）。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-24T11:18:25Z",
+      "sha256": "6f3b514a77648ea0df0d56b7554d75be7a4abb1453a47bf217451fc0a72310b2",
+      "size": 116182879,
+      "tag": "debug-526902",
+      "versionCode": 526902,
+      "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
       "file": "https://github.com/sunqintao/moting-releases/releases/download/5.0.0-523486/moting-523486-arm64-v8a.apk",
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-22T15:11:38Z"
+  "updatedAt": "2026-10-24T11:18:25Z"
 }
