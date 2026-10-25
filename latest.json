@@ -1,13 +1,13 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527863/moting-527863-arm64-v8a.apk",
-      "notes": "墨听调试包 · 音效下载双源容灾（2026-10-25）\n\n针对真机反馈的「远程音效试听时好时坏」：实测确认素材仓库主源（cash.ai / cnb.cool）的下载通道存在服务端间歇性波动（同一文件几分钟内从连接失败自行恢复，与手机无关）。本版把音效下载升级为三级容灾：cash.ai 主源 → GitHub 官方镜像（分属不同服务商，同内容同校验值）→ APK 内置地址；每级各带快速重试与 4~8 秒超时，全部素材源失败后的冷却缩短为 60 秒；试听失败提示会透出真实原因，便于定位。\n\n完整更新说明见应用内「关于 → 更新日志」。",
-      "publishedAt": "2026-10-25T03:17:21Z",
-      "sha256": "a973776fbd0d0adfb20dd11c62dd851d1fdf621e680f077bf4bd6df9736a8427",
-      "size": 116183147,
-      "tag": "debug-527863",
-      "versionCode": 527863,
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527891/moting-527891-arm64-v8a.apk",
+      "notes": "墨听调试包 · 镜像源切换到 sunqintao 仓库（2026-10-25）\n\n音效下载镜像第二源切换到 sunqintao/moting-voice-20261010：已用本地完整素材目录并集同步该仓库（补齐 bdyinxiao 878 变体、XYZ50 音色表与最新索引），App 所需全部 10327 个音效文件覆盖核验为零缺失。下载链路：cash.ai 主源 → sunqintao GitHub 镜像 → APK 内置地址，三级容灾；每级快速重试 + 4~8 秒超时，全部素材源失败冷却 60 秒；试听失败提示透出真实原因。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-25T03:45:00Z",
+      "sha256": "c59620f93cc5c05a26d5f68bc4d18f0b052fc162b5714d2b952be491af13c2fe",
+      "size": 116183004,
+      "tag": "debug-527891",
+      "versionCode": 527891,
       "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T03:17:21Z"
+  "updatedAt": "2026-10-25T03:45:00Z"
 }
