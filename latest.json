@@ -1,13 +1,13 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527891/moting-527891-arm64-v8a.apk",
-      "notes": "墨听调试包 · 镜像源切换到 sunqintao 仓库（2026-10-25）\n\n音效下载镜像第二源切换到 sunqintao/moting-voice-20261010：已用本地完整素材目录并集同步该仓库（补齐 bdyinxiao 878 变体、XYZ50 音色表与最新索引），App 所需全部 10327 个音效文件覆盖核验为零缺失。下载链路：cash.ai 主源 → sunqintao GitHub 镜像 → APK 内置地址，三级容灾；每级快速重试 + 4~8 秒超时，全部素材源失败冷却 60 秒；试听失败提示透出真实原因。\n\n完整更新说明见应用内「关于 → 更新日志」。",
-      "publishedAt": "2026-10-25T03:45:00Z",
-      "sha256": "c59620f93cc5c05a26d5f68bc4d18f0b052fc162b5714d2b952be491af13c2fe",
-      "size": 116183004,
-      "tag": "debug-527891",
-      "versionCode": 527891,
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-528004/moting-528004-arm64-v8a.apk",
+      "notes": "墨听调试包 · 本地音效镜像兜底（2026-10-25 下午）\n\n把原作者 yinpin 仓库的本地音效（bdyinxiao）完整镜像收进自己的素材仓库 sunqintao/moting-voice-20261010：937 个文件全量（含此前缺失的「音效名2~5」变体 59 个）与角色管理提示音 wenxintishi.mp3。本地音效下载在原作者仓库、gitee 双源之外增加自有镜像第三源，原作者仓库若删除/失效仍可正常下载。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-25T05:37:34Z",
+      "sha256": "d966405df029ee3e6cc5b386a52938d798a1aa67fea91be2b307e214d29b4f96",
+      "size": 116183626,
+      "tag": "debug-528004",
+      "versionCode": 528004,
       "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T03:45:00Z"
+  "updatedAt": "2026-10-25T05:37:34Z"
 }
