@@ -1,13 +1,13 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-526902/moting-526902-arm64-v8a.apk",
-      "notes": "墨听调试包 · 发热治理修复批（2026-10-24）\n\n本版修复上一版（524200）实测暴露的三个问题：远程音效播放失败与听书卡顿（音效新源改为默认关闭并加快速超时）、听书缓存清单合并写竞态导致的同句重复合成（越听越卡、发热压不下来的主因之一）、合成重试退避缺陷（此前从未生效且一旦激活会阻塞音频入队最长 15 秒）。\n\n完整更新说明见应用内「关于 → 更新日志」。",
-      "publishedAt": "2026-10-24T11:18:25Z",
-      "sha256": "6f3b514a77648ea0df0d56b7554d75be7a4abb1453a47bf217451fc0a72310b2",
-      "size": 116182879,
-      "tag": "debug-526902",
-      "versionCode": 526902,
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527768/moting-527768-arm64-v8a.apk",
+      "notes": "墨听调试包 · 音效页与远程音效修复（2026-10-24 晚）\n\n修复今天真机反馈的两个问题：①远程音效试听报「没有找到可用远程音效」——根因是远程音效的原始下载源仓库（cnb.cool/applecabal/yinpin）已被服务端删除，与手机网络无关；现按内容校验值从音效素材仓库自动兜底下载，试听与播放恢复。②音效设置页每次进入都全量重新加载——目录结果未变更时直接复用，重进即时显示。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-25T01:40:38Z",
+      "sha256": "07291fa9c171a39a34e27c3bcd04adb0d8ad817ab25e8afc8e6bd72a089b6281",
+      "size": 116183352,
+      "tag": "debug-527768",
+      "versionCode": 527768,
       "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T13:02:37Z"
+  "updatedAt": "2026-10-25T01:40:38Z"
 }
