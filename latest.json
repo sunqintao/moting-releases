@@ -1,13 +1,13 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527768/moting-527768-arm64-v8a.apk",
-      "notes": "墨听调试包 · 音效页与远程音效修复（2026-10-24 晚）\n\n修复今天真机反馈的两个问题：①远程音效试听报「没有找到可用远程音效」——根因是远程音效的原始下载源仓库（cnb.cool/applecabal/yinpin）已被服务端删除，与手机网络无关；现按内容校验值从音效素材仓库自动兜底下载，试听与播放恢复。②音效设置页每次进入都全量重新加载——目录结果未变更时直接复用，重进即时显示。\n\n完整更新说明见应用内「关于 → 更新日志」。",
-      "publishedAt": "2026-10-25T01:40:38Z",
-      "sha256": "07291fa9c171a39a34e27c3bcd04adb0d8ad817ab25e8afc8e6bd72a089b6281",
-      "size": 116183352,
-      "tag": "debug-527768",
-      "versionCode": 527768,
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527814/moting-527814-arm64-v8a.apk",
+      "notes": "墨听调试包 · 音效素材仓库直接换源（2026-10-24 晚）\n\n按用户拍板：远程与引擎音效统一切换到音效素材仓库下载（默认即生效，无需任何设置），原「启用开关」已移除——设置页「素材仓库」只剩一个仓库地址输入框（默认 cash.ai 仓库，main 分支）。下载按 SHA-256 内容校验、失败自动回退内置地址，带 4~8 秒快速超时与失败 10 分钟冷却。另含上一版（527768）的音效页缓存修复（重进不再全量重新加载）与远程音效断源修复（原下载源仓库 applecabal/yinpin 已被服务端删除）。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-25T02:26:12Z",
+      "sha256": "b3bec506104d67b3e1692aa6ee14c6c0f5cc504e0ef20f5b79f5f0d268c5d6a5",
+      "size": 116183577,
+      "tag": "debug-527814",
+      "versionCode": 527814,
       "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T01:40:38Z"
+  "updatedAt": "2026-10-25T02:26:12Z"
 }
