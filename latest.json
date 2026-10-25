@@ -1,13 +1,13 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-528004/moting-528004-arm64-v8a.apk",
-      "notes": "墨听调试包 · 本地音效镜像兜底（2026-10-25 下午）\n\n把原作者 yinpin 仓库的本地音效（bdyinxiao）完整镜像收进自己的素材仓库 sunqintao/moting-voice-20261010：937 个文件全量（含此前缺失的「音效名2~5」变体 59 个）与角色管理提示音 wenxintishi.mp3。本地音效下载在原作者仓库、gitee 双源之外增加自有镜像第三源，原作者仓库若删除/失效仍可正常下载。\n\n完整更新说明见应用内「关于 → 更新日志」。",
-      "publishedAt": "2026-10-25T05:37:34Z",
-      "sha256": "d966405df029ee3e6cc5b386a52938d798a1aa67fea91be2b307e214d29b4f96",
-      "size": 116183626,
-      "tag": "debug-528004",
-      "versionCode": 528004,
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-528159/moting-528159-arm64-v8a.apk",
+      "notes": "墨听调试包 · 本地音效四源容灾（2026-10-25 傍晚）\n\n本地音效（bdyinxiao）下载升级为四源：原作者 CNB → 原作者 gitee → 自有 cash 仓 → 自有 GitHub 镜像（两个自有仓均已同步 937 全量 + wenxintishi.mp3）。原作者仓库删除/失效或单一服务商波动都不影响下载。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-25T08:13:55Z",
+      "sha256": "f0643ff96c973ab5798b2327b5c7124df955c9b5627cf1e03f06617698a3ce34",
+      "size": 116183411,
+      "tag": "debug-528159",
+      "versionCode": 528159,
       "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T05:37:34Z"
+  "updatedAt": "2026-10-25T08:13:55Z"
 }
