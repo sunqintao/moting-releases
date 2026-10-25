@@ -1,13 +1,13 @@
 {
   "channels": {
     "debug": {
-      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527814/moting-527814-arm64-v8a.apk",
-      "notes": "墨听调试包 · 音效素材仓库直接换源（2026-10-24 晚）\n\n按用户拍板：远程与引擎音效统一切换到音效素材仓库下载（默认即生效，无需任何设置），原「启用开关」已移除——设置页「素材仓库」只剩一个仓库地址输入框（默认 cash.ai 仓库，main 分支）。下载按 SHA-256 内容校验、失败自动回退内置地址，带 4~8 秒快速超时与失败 10 分钟冷却。另含上一版（527768）的音效页缓存修复（重进不再全量重新加载）与远程音效断源修复（原下载源仓库 applecabal/yinpin 已被服务端删除）。\n\n完整更新说明见应用内「关于 → 更新日志」。",
-      "publishedAt": "2026-10-25T02:26:12Z",
-      "sha256": "b3bec506104d67b3e1692aa6ee14c6c0f5cc504e0ef20f5b79f5f0d268c5d6a5",
-      "size": 116183577,
-      "tag": "debug-527814",
-      "versionCode": 527814,
+      "file": "https://github.com/sunqintao/moting-releases/releases/download/debug-527863/moting-527863-arm64-v8a.apk",
+      "notes": "墨听调试包 · 音效下载双源容灾（2026-10-25）\n\n针对真机反馈的「远程音效试听时好时坏」：实测确认素材仓库主源（cash.ai / cnb.cool）的下载通道存在服务端间歇性波动（同一文件几分钟内从连接失败自行恢复，与手机无关）。本版把音效下载升级为三级容灾：cash.ai 主源 → GitHub 官方镜像（分属不同服务商，同内容同校验值）→ APK 内置地址；每级各带快速重试与 4~8 秒超时，全部素材源失败后的冷却缩短为 60 秒；试听失败提示会透出真实原因，便于定位。\n\n完整更新说明见应用内「关于 → 更新日志」。",
+      "publishedAt": "2026-10-25T03:17:21Z",
+      "sha256": "a973776fbd0d0adfb20dd11c62dd851d1fdf621e680f077bf4bd6df9736a8427",
+      "size": 116183147,
+      "tag": "debug-527863",
+      "versionCode": 527863,
       "versionName": "5.0.0+g8a947e04.overheating-issue_debug"
     },
     "release": {
@@ -22,5 +22,5 @@
     }
   },
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T02:26:12Z"
+  "updatedAt": "2026-10-25T03:17:21Z"
 }
